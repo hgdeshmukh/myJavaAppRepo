@@ -191,8 +191,8 @@
   <main>
     <!-- intro section -->
     <section class="intro">
-      <h1 class="title">Black Friday Deals</h1>
-      <p>Get up to 50% off on all our products and services. Hurry up, the offer ends in 24 hours.</p>
+      <h1 class="title">Good Thrusday Deals</h1>
+      <p>Hey Budy, You an earn more money by trading today. Hurry up, the offer of HERO/ZERO call will end at 3.30 pm.</p>
     </section>
 
     <!-- sign-up section -->
