@@ -28,12 +28,12 @@ pipeline {
         }
         stage('Nexus Upload'){
             steps{
-                nexusArtifactUploader artifacts: [[artifactId: 'MyWebApp', classifier: '', file: 'MyWebApp/target/MyWebApp.war', type: 'war']], credentialsId: 'nexus-cred', groupId: 'com.mkyong', nexusUrl: '35.154.161.153:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '1.0-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'MyWebApp', classifier: '', file: 'MyWebApp/target/MyWebApp.war', type: 'war']], credentialsId: 'nexus-cred', groupId: 'com.mkyong', nexusUrl: '13.232.101.160:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '1.0-SNAPSHOT'
             }
         }
         stage('DEV Deploy'){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://3.111.147.50:8080/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://13.233.178.62:8080/')], contextPath: null, war: '**/*.war'
             }
         }  
         stage('Slack Notify'){
