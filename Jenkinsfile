@@ -43,7 +43,7 @@ pipeline {
         }
         stage('QA Deployment'){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://3.111.147.50:8080/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://13.233.178.62:8080/')], contextPath: null, war: '**/*.war'
             }
         }
         stage('Slack Notify QA'){
